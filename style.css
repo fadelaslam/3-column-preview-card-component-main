@@ -1,0 +1,99 @@
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --verDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  font-size: 18px;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparentWhite);
+}
+
+.container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Spesific Background */
+.sedans {
+  background-color: var(--brightOrange);
+}
+
+.suvs {
+  background-color: var(--darkCyan);
+}
+
+.luxury {
+  background-color: var(--verDarkCyan);
+}
+
+/* General Use */
+.perview-card {
+  padding: 70px;
+}
+
+.perview-card img {
+  margin-left: -40px;
+}
+
+.perview-card h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: var(--veryLightGray);
+}
+
+.perview-card > p {
+  height: 200px;
+  font-weight: 400;
+}
+
+.perview-card > a {
+  padding: 15px 33px;
+  font-size: 0.8em;
+  text-decoration: none;
+  background-color: var(--veryLightGray);
+  border-radius: 50px;
+}
+
+.perview-card > a:hover {
+  background-color: transparent;
+  color: var(--veryLightGray);
+  border: 2px solid #ffff;
+}
+
+/* Spesific Class For Tag A */
+.sedans > a {
+  color: var(--brightOrange);
+}
+
+.suvs > a {
+  color: var(--darkCyan);
+}
+
+.luxury > a {
+  color: var(--verDarkCyan);
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin-top: 30px;
+  }
+
+  .perview-card {
+    padding: 50px;
+  }
+
+  .perview-card > p {
+    height: 100px;
+    margin-bottom: 50px;
+  }
+}
